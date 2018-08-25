@@ -1,4 +1,4 @@
-# PortalApp
+# Portal-app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
@@ -25,7 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-<h1>Angular5-springboot</h1>
+<h1>Task-api</h1>
 This example shows how to use angular 5 application with java Spring MVC with help of RestController.<br>
 
 Here you can see following things.<br>
