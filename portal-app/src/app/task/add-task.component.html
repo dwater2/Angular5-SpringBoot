@@ -1,0 +1,50 @@
+<br>
+<div class="col-md-12">
+  <div class="panel panel-primary">
+    <div class="panel-heading">{{titulo}}</div>
+    <div class="panel-body">
+      <div class="container">
+        <form class="form-horizontal"> 
+
+          <div class="form-group">
+            <label for="name" class="cols-sm-2 control-label">Título:</label>
+            <div class="cols-sm-6">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" [(ngModel)]="task.name" placeholder="Título" 
+                  name="name" class="form-control" id="name">
+              </div>
+            </div>
+          </div>
+                    
+          <div class="form-group">
+            <label for="description" class="cols-sm-2 control-label">Descrição:</label>
+            <div class="cols-sm-6">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                <input type="text" [(ngModel)]="task.description" placeholder="Descrição" 
+                  name="description" class="form-control" id="description">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Concluído:</label>
+            <label class="radio-inline control-label">
+              <input type="radio" [(ngModel)]="task.status" name="status" class="form-control" [value]="false">Não
+            </label>
+            <label class="radio-inline control-label">
+              <input type="radio" [(ngModel)]="task.status" name="status" class="form-control" [value]="true">Sim
+            </label>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="panel-footer">
+      <button class="btn btn-primary" (click)="saveTask()">Salvar</button>
+    </div> 
+
+  </div>
+</div>

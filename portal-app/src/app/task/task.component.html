@@ -1,0 +1,44 @@
+<br>
+<div class="col-md-12">
+  <div class="panel panel-primary">
+      <div class="panel-heading">Lista de Tarefas</div>
+      <div class="panel-body">
+        <div class="container">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th class="hidden">Id</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Concluído(?)</th>
+                <th>Data Criação</th>
+                <th>Data Modificação</th>
+                <th>Ações</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let task of tasks">
+                <td class="hidden">{{task.id}}</td>
+                <td>{{task.name}}</td>
+                <td>{{task.description}}</td>
+                <td>
+                  <input title="Clique para atualizar o status" type="checkbox" [ngModel]="task.status" (ngModelChange)="onFilterChange($event, task)">
+                </td>
+                <td>{{task.created | date: 'dd/MM/yyyy' }}</td>
+                <td>{{task.modified | date: 'dd/MM/yyyy' }}</td>
+                <td>
+                  <button class="btn btn-primary" (click)="editTask(task)">Editar</button>
+                  <button class="btn btn-danger" (click)="deleteTask(task)">Excluir</button>
+                </td>
+              </tr>
+              <tr *ngIf="tasks.length == 0" >
+                <td colspan="7">Nenhum registro encontrado </td>
+              </tr>	
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
